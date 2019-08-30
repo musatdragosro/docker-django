@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webpack_loader',
     'myapp.apps.MyappConfig',
     'celery',
 ]
@@ -75,15 +76,15 @@ WSGI_APPLICATION = 'mydjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'HOST': 'db',
+#         'PORT': 5432,
+#     }
+# }
 
 
 # Password validation
@@ -160,3 +161,7 @@ except ImportError:
     print('No Local Settings Found')
 
 # ---------------- End Local Settings ------------------------------------
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
