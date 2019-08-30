@@ -12,3 +12,5 @@ src/mydjango/__pycache__/settings.cpython-35.pyc
 .env
 env/
 **/.DS_Store
+assets/
+webpack-stats.json
